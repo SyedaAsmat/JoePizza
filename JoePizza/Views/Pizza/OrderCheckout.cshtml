@@ -1,0 +1,12 @@
+﻿<div class="container text-center">
+    <h2>Order Checkout</h2>
+
+    <p><b>Selected Pizza: </b>@Model.Pizza.Name</p>
+    <p><b>Quantity: </b>@Model.Quantity</p>
+    <p><b>Total Price:</b> Rs. @Model.TotalAmount</p>
+
+    <form method="post" action="@Url.Action("OrderConfirmation", "Pizza")">
+        <input type="hidden" name="orderId" value="@Model.Id">
+        <input class="btn btn-primary" type="submit" value="Checkout">
+    </form>
+</div>

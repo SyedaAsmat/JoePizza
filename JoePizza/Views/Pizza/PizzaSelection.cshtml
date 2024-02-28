@@ -1,0 +1,35 @@
+﻿<h1 class="text-center">Welcome to Joe's Pizza</h1>
+<h3 class="text-center">What would you like to have?</h3>
+
+<form class="select-form" method="post" action="@Url.Action("OrderCheckout", "Pizza")">
+    <table>
+        <tr>
+            <td>
+                <label for="pizzaId">Select Pizza:</label>
+            </td>
+            <td>
+                <select class="form-control" name="pizzaId" id="pizzaId" required>
+                    <option value="">Choose Pizza</option>
+                    @foreach (var pizza in Model)
+                    {
+                        <option value="@pizza.Id">@pizza.Name - Rs. @pizza.Price</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="quantity">Quantity:</label>
+            </td>
+            <td>
+                <input class="form-control" type="number" name="quantity" id="quantity" min="1" value="1" required>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input class="btn btn-primary" type="submit" value="Add to Order">
+            </td>
+        </tr>
+    </table>
+</form>

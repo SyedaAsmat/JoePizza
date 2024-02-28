@@ -1,0 +1,32 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.select-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table td {
+    padding: 10px;
+}
+.input-style{
+    height: 25px;
+    width:125px;
+}
